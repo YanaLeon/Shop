@@ -37,7 +37,7 @@ export const PagesLinks = () => {
       <>
       <div className="wrapper-link-logoPageLink">
         <NavLink to="/" end className="logo-aPageLink">
-            <img src='/image/logo.png' className="logoPageLink" alt="logo"/>
+            <img src='/Shop/image/logo.png' className="logoPageLink" alt="logo"/>
         </NavLink>
         <div className="navPageLink">
             <NavLink to="/" end    className={getLinkClass}>Main</NavLink>
