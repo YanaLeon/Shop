@@ -1,1 +1,0 @@
-# Shop on React and Redux
