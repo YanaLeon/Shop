@@ -55,7 +55,7 @@ class Main extends React.PureComponent {
             clientsCode = this.state.clients.map((element) => {
             return (
             <div className="Main-artical" key={element.id}>
-                <img className="Main-img" src = {"/image/" + element.img}/>
+                <img className="Main-img" src = {"/Shop/image/" + element.img}/>
                 <p className="Main-text">{element.discription}</p>
             </div>
             )
