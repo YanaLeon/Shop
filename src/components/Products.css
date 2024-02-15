@@ -1,0 +1,46 @@
+div.wrapper-main {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.PageLink {
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+}
+  
+.ActivePageLink {
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
+}
+
+@media (max-width: 1000px) {
+    .PageLink {
+      font-size: 1.2rem;
+    }
+    .ActivePageLink {
+      font-size: 1.2rem;
+    }
+}
+  
+@media (max-width: 640px) {
+    .PageLink {
+      font-size: 1rem;
+    }
+    .ActivePageLink {
+      font-size: 1rem;
+    }
+}
+  
+@media (max-width: 420px) {
+    .PageLink {
+      font-size: 0.6rem;
+    }
+    .ActivePageLink {
+      font-size: 0.6rem;
+    }
+}

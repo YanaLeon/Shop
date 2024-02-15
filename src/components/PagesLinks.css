@@ -1,0 +1,84 @@
+.PageLink {
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+}
+  
+.ActivePageLink {
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
+}
+
+.navPageLink {
+    float: right;
+}
+  
+.logoPageLink {
+    width: 30%;
+}
+  
+.logo-aPageLink {
+    margin-right: 0px;
+    margin-left: 0px;
+    width: 40%;
+}
+  
+.wrapper-link-logoPageLink {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shop-cartPageLink:hover {
+    font-size: 1.2rem;
+    
+}
+
+path { 
+    fill: #444b51
+}
+
+.product-numberPageLink {
+    width: 20px;
+    height: 20px;
+    background-color: #d17878;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.product-numberPageLink span{
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+@media (max-width: 1000px) {
+    .PageLink {
+      font-size: 1.2rem;
+    }
+    .ActivePageLink {
+      font-size: 1.2rem;
+    }
+}
+  
+@media (max-width: 640px) {
+    .PageLink {
+      font-size: 1rem;
+    }
+    .ActivePageLink {
+      font-size: 1rem;
+    }
+}
+  
+@media (max-width: 420px) {
+    .PageLink {
+      font-size: 0.6rem;
+    }
+    .ActivePageLink {
+      font-size: 0.6rem;
+    }
+}
