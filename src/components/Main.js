@@ -61,7 +61,7 @@ class Main extends React.PureComponent {
             )
         })
       }
-  console.log(clientsCode, 1)
+      
       return (
         <div>
             <div className="Main-text-title">Ideas for your interior</div>

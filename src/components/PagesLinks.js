@@ -36,7 +36,7 @@ export const PagesLinks = () => {
     return (
       <>
       <div className="wrapper-link-logoPageLink">
-        <NavLink to="/" end className="logo-aPageLink">
+        <NavLink to="/Shop" end className="logo-aPageLink">
             <img src='/Shop/image/logo.png' className="logoPageLink" alt="logo"/>
         </NavLink>
         <div className="navPageLink">

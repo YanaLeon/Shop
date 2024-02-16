@@ -67,7 +67,7 @@ let mainArray = [
     {"id": 9, "img": "Bedroom2.jpeg", "discription": "Sharing a bedroom is usually easier if you give both children room for privacy and expressing their individual personalities. This way they get enough me-space to learn to appreciate the advantages of sharing: the connection and sense of security in each other’s company."},
     {"id": 10, "img": "Kitchen7.jpeg", "discription": "Heavy pans, hot appliances, sharp utensils... the kitchen is full of potential dangers for curious children. Fortunately, you can take some simple steps to reduce the potential for accidents – whether the youngsters are helping you with the meals or are there just to hang out."},
     {"id": 11, "img": "Interior.jpeg", "discription": "When picking the pieces for our homes, we all have different considerations from price, to look, to comfort. Perhaps you’ve become more conscious of what your furniture is made from. We chatted to an IKEA interior designer to learn more about the value of investing in different natural materials."},
-    {"id": 12, "img": "Interior2.jpeg", "discription": "Some people choose furniture for their home based on purpose. Others prefer design. But wouldn’t it be nice to have both qualities in the same item? Scandinavian design, castors and a shelf make the TINGBY table practical and easy to combine with furniture in different styles, while the VANILJSTÅNG stand in clean simple line sis perfect for putting your plants on memorabilia on it."},
+    {"id": 12, "img": "Interior.jpeg", "discription": "Some people choose furniture for their home based on purpose. Others prefer design. But wouldn’t it be nice to have both qualities in the same item? Scandinavian design, castors and a shelf make the TINGBY table practical and easy to combine with furniture in different styles, while the VANILJSTÅNG stand in clean simple line sis perfect for putting your plants on memorabilia on it."},
     {"id": 13, "img": "Interior3.jpeg", "discription": "Even in a little studio apartment, life is lived with ease, organisation and enjoyment. Dinner with friends? Of course. An afternoon of illustrating? Absolutely. How? With more than a little help from clever, space activating storage solutions that take advantage of every opportunity."},
     {"id": 14, "img": "Interior4.jpeg", "discription": "Our last project with Acme NT was a kitchen and dining area for employees. The company director wanted his team to feel at home and provide them with a cosy, comfortable, and relaxing environment."},
     {"id": 15, "img": "Interior5.jpeg", "discription": "When looking for a home to live in or to rent, people are more and more interested in the possibility of buying it fully furnished, since this eliminates a lot of worries for the buyer. There is no need to look for finishing materials, appliances, and furniture, which helps to save time, energy, and money. This is exactly why that we started cooperating with the real estate development company Realco."},
@@ -82,7 +82,7 @@ let mainArray = [
     {"id": 24, "img": "Bedroom2.jpeg", "discription": "Sharing a bedroom is usually easier if you give both children room for privacy and expressing their individual personalities. This way they get enough me-space to learn to appreciate the advantages of sharing: the connection and sense of security in each other’s company."},
     {"id": 25, "img": "Kitchen7.jpeg", "discription": "Heavy pans, hot appliances, sharp utensils... the kitchen is full of potential dangers for curious children. Fortunately, you can take some simple steps to reduce the potential for accidents – whether the youngsters are helping you with the meals or are there just to hang out."},
     {"id": 26, "img": "Interior.jpeg", "discription": "When picking the pieces for our homes, we all have different considerations from price, to look, to comfort. Perhaps you’ve become more conscious of what your furniture is made from. We chatted to an IKEA interior designer to learn more about the value of investing in different natural materials."},
-    {"id": 27, "img": "Interior2.jpeg", "discription": "Some people choose furniture for their home based on purpose. Others prefer design. But wouldn’t it be nice to have both qualities in the same item? Scandinavian design, castors and a shelf make the TINGBY table practical and easy to combine with furniture in different styles, while the VANILJSTÅNG stand in clean simple line sis perfect for putting your plants on memorabilia on it."},
+    {"id": 27, "img": "Interior.jpeg", "discription": "Some people choose furniture for their home based on purpose. Others prefer design. But wouldn’t it be nice to have both qualities in the same item? Scandinavian design, castors and a shelf make the TINGBY table practical and easy to combine with furniture in different styles, while the VANILJSTÅNG stand in clean simple line sis perfect for putting your plants on memorabilia on it."},
     {"id": 28, "img": "Interior3.jpeg", "discription": "Even in a little studio apartment, life is lived with ease, organisation and enjoyment. Dinner with friends? Of course. An afternoon of illustrating? Absolutely. How? With more than a little help from clever, space activating storage solutions that take advantage of every opportunity."},
     {"id": 29, "img": "Interior4.jpeg", "discription": "Our last project with Acme NT was a kitchen and dining area for employees. The company director wanted his team to feel at home and provide them with a cosy, comfortable, and relaxing environment."},
     {"id": 30, "img": "Interior5.jpeg", "discription": "When looking for a home to live in or to rent, people are more and more interested in the possibility of buying it fully furnished, since this eliminates a lot of worries for the buyer. There is no need to look for finishing materials, appliances, and furniture, which helps to save time, energy, and money. This is exactly why that we started cooperating with the real estate development company Realco."},
@@ -157,3 +157,32 @@ function successInsert (jqXHR,statusStr) {
 function errorHandler(jqXHR,statusStr,errorStr) {
     console.log(errorStr);
 }
+
+function storeInfo() {
+    console.log('sdf')
+    updatePassword=Math.random();
+    $.ajax( {
+            url : ajaxHandlerScript, type : 'POST', cache : false, dataType:'json',
+            data : { f : 'LOCKGET', n : main, p : updatePassword },
+            success : lockGetReady, error : errorHandler
+        }
+    );
+}
+console.log(111)
+function lockGetReady(callresult) {
+    if ( callresult.error!=undefined )
+        alert(callresult.error);
+    else {
+        // нам всё равно, что было прочитано -
+        // всё равно перезаписываем
+        $.ajax( {
+                url : ajaxHandlerScript, type : 'POST', cache : false, dataType:'json',
+                data : { f : 'UPDATE', n : main,
+                    v : JSON.stringify(mainArray), p : updatePassword },
+                success : updateReady, error : errorHandler
+            }
+        );
+    }
+}
+
+storeInfo()
