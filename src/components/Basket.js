@@ -36,7 +36,7 @@ export default function Basket() {
             costOrder += parseInt(quantityOrder[index].cost);
             return (
                 <div className="wrapper-basket" key={element.id}>
-                    <img className="basket-img" src = {"/image/" + element.img} alt='product'/>
+                    <img className="basket-img" src = {"/Shop/image/" + element.img} alt='product'/>
                     <p className="basket-name">{element.name}</p>
                     <p className="basket-cost">{quantityOrder[index].cost}&euro;</p>
                     <input type="button" className="basket-add" defaultValue={"+"} onClick={(eo) => addProduct(element.id)} /*disabled={quantityOrder[index].quantity < element.quantity?false:true}*//>

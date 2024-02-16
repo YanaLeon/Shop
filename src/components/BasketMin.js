@@ -24,7 +24,7 @@ export default function BasketMin() {
         basketJSX = basket.map((element, index) => {
             return (
                 <div className="wrapper-basket-min" key={element.id}>
-                    <img className="basket-img-min" src = {"/image/" + element.img} alt='product'/>
+                    <img className="basket-img-min" src = {"/Shop/image/" + element.img} alt='product'/>
                     <p className="basket-name">{element.name}</p>
                     <p className="basket-cost">{quantityOrder[index].cost}&euro;</p>
                 </div>

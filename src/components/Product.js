@@ -17,7 +17,7 @@ const Product = ({info}) => {
 
   return (
       <div className="Product">
-        <img src = {"/image/" + info.img}/>
+        <img src = {"/Shop/image/" + info.img}/>
         <p className="name">{info.name}</p>
         <p className="description">{info.shortDescription}</p>
         <p className="cost">{info.cost}&euro;</p>

@@ -40,7 +40,7 @@ export const PagesLinks = () => {
             <img src='/Shop/image/logo.png' className="logoPageLink" alt="logo"/>
         </NavLink>
         <div className="navPageLink">
-            <NavLink to="/" end    className={getLinkClass}>Main</NavLink>
+            <NavLink to="/Shop" end    className={getLinkClass}>Main</NavLink>
             <NavLink to={"/products/:"+number.number+"/:"+stock+"/:"+category+"/:"+price} className={getLinkClass}>Products</NavLink>
             <NavLink to="/basket" className={getLinkClass}>{
                         basket && basket.length > 0?
