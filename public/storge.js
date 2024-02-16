@@ -112,7 +112,7 @@ const ajaxHandlerScript="https://fe.it-academy.by/AjaxStringStorage2.php";
 let updatePassword;
 const products = 'LEONOVICH_SHOP_PRODUCTS';
 const basketName = 'LEONOVICH_SHOP';
-const main = 'LEONOVICH_SHOP_MAIN';
+const main = 'LEONOVICH_SHOP_MAI';
 
 // отправляем данные о продуктах
 // function insert () {

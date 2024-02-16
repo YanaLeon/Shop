@@ -25,7 +25,7 @@ class Main extends React.PureComponent {
     loadData = () => {
   
         const ajaxHandlerScript="https://fe.it-academy.by/AjaxStringStorage2.php";
-        const main = 'LEONOVICH_SHOP_MAIN';
+        const main = 'LEONOVICH_SHOP_MAI';
         
         $.ajax({
             url : ajaxHandlerScript, type : 'POST', cache : false, dataType:'json',
