@@ -6,7 +6,7 @@
 }
 
 .Main-artical {
-    width: 40%;
+    width: 20%;
     margin: 5px 5px 50px 5px;
     background-color: #faf1f1; 
     border-radius: 9px; 
@@ -30,6 +30,12 @@
     font-size: 1.2rem;
 }
 
+@media (max-width: 1250px) {
+    .Main-artical {
+        width: 30%;
+    }
+}
+
 @media (max-width: 1000px) {
     .Main-text-title {
         font-size: 1.2rem;
@@ -45,6 +51,9 @@
     }
     .Main-text {
         font-size: 0.8rem;
+    }
+    .Main-artical {
+        width: 40%;
     }
 }
   
